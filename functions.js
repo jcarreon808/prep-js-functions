@@ -21,8 +21,11 @@ var b = 24;
  *  This function returns the result of adding `a` and `b` together.
  *  Store this value in a variable named `sum`.
  */
-function add(n1,n2){return n1 + n2;}
+function add(n1,n2){
+	return n1 + n2;
+}
 var sum = add(a,b);
+add();
 console.log(sum);
 
 
@@ -34,8 +37,11 @@ console.log(sum);
  *  This function returns the result of subtracting `b` from `a`.
  *  Store this value in a variable named `difference`
  */
-function subtract(n2,n1){return n2 - n1;}
+function subtract(n2,n1){
+	return n2 - n1;
+}
 var difference = subtract(b,a);
+subtract();
 console.log(difference);
 
 /**
@@ -58,7 +64,11 @@ console.log(product);
  *  "My football team lost X times this week", where `X` is the
  *  value stored in `difference`.
  */
-
+function checkDifference(difference){
+	return "My football team lost " + difference + " times this week";
+}
+checkDifference();
+console.log(checkDifference(difference));
 
 /**
  *  #6
@@ -69,7 +79,11 @@ console.log(product);
  *  "I CAN ADDZ X NUMBERS"  where `X` is the value
  *  stored in the variable `sum`.
  */
-
+function checkSum(x){
+	return "I CAN ADDZ " + x + " NUMBERS";
+}
+checkSum();
+console.log(checkSum(sum));
 
 /**
  *  #7
@@ -79,8 +93,11 @@ console.log(product);
  *  multiplies it by the number stored at `difference` and
  *  then prints the result to the console.
  */
-
-
+function checkProduct(product,difference){
+	return product*difference;
+}
+checkProduct();
+console.log(checkProduct(product,difference));
 /**
  *  #8
  *  Function - addThenSubtract
@@ -94,8 +111,12 @@ console.log(product);
  *  **example:**
  *      addThenSubtract(4, 5, 7); //-> returns 2 because 4 + 5 - 7 = 2
  */
-
-
+function addThenSubtract(n1,n2,n3){
+	return n1 + n2 - n3;
+	
+}
+addThenSubtract();
+console.log(addThenSubtract(10,9,8));
 /**
  *  #9
  *  Function - addThenMultiply
