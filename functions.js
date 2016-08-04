@@ -51,8 +51,11 @@ console.log(difference);
  *  This function returns the result of multiplying `b` by `a`.
  *  Store this value in a variable named `product`
  */
-function multiply(n2,n1){return n2*n1;}
+function multiply(n2,n1){
+	return n2*n1;
+}
 var product = multiply(b,a);
+multiply();
 console.log(product);
 
 /**
@@ -79,8 +82,8 @@ console.log(checkDifference(difference));
  *  "I CAN ADDZ X NUMBERS"  where `X` is the value
  *  stored in the variable `sum`.
  */
-function checkSum(x){
-	return "I CAN ADDZ " + x + " NUMBERS";
+function checkSum(sum){
+	return "I CAN ADDZ " + sum + " NUMBERS";
 }
 checkSum();
 console.log(checkSum(sum));
@@ -128,7 +131,11 @@ console.log(addThenSubtract(10,9,8));
  *
  *  Store the return of this function to a variable named `howMany`
  */
-
+function addThenMultiply(n1,n2,n3){
+	return (n1 + n2) * n3;
+}
+addThenMultiply();
+console.log(addThenMultiply(product,sum,difference));
 
 /**
  *  #10
@@ -144,9 +151,9 @@ console.log(addThenSubtract(10,9,8));
  * Call this function and pass your first and last name into it.
  * Store the return value to a variable named `myFullName`
  */
+function createFullName()
 
-
-/**
+/** 
  *  #11
  *  Function - verifyDrinkingAge
  *
