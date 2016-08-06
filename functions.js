@@ -11,8 +11,8 @@
  *  variable names you will create as they will become input to _other_
  *  functions.
  */
-var a = 8;
-var b = 24;
+var a = 1;
+var b = 3;
 
 /**
  *  #2
@@ -24,8 +24,9 @@ var b = 24;
 function add(n1,n2){
 	return n1 + n2;
 }
-var sum = add(a,b);
 add();
+
+var sum = add(a,b);
 console.log(sum);
 
 
@@ -40,8 +41,8 @@ console.log(sum);
 function subtract(n2,n1){
 	return n2 - n1;
 }
-var difference = subtract(b,a);
 subtract();
+var difference = subtract(b,a);
 console.log(difference);
 
 /**
@@ -54,8 +55,8 @@ console.log(difference);
 function multiply(n2,n1){
 	return n2*n1;
 }
-var product = multiply(b,a);
 multiply();
+var product = multiply(b,a);
 console.log(product);
 
 /**
@@ -67,8 +68,8 @@ console.log(product);
  *  "My football team lost X times this week", where `X` is the
  *  value stored in `difference`.
  */
-function checkDifference(difference){
-	return "My football team lost " + difference + " times this week";
+function checkDifference(x){
+	return "My football team lost " + x + " times this week";
 }
 checkDifference();
 console.log(checkDifference(difference));
@@ -82,8 +83,8 @@ console.log(checkDifference(difference));
  *  "I CAN ADDZ X NUMBERS"  where `X` is the value
  *  stored in the variable `sum`.
  */
-function checkSum(sum){
-	return "I CAN ADDZ " + sum + " NUMBERS";
+function checkSum(x){
+	return "I CAN ADDZ " + x + " NUMBERS";
 }
 checkSum();
 console.log(checkSum(sum));
@@ -96,8 +97,8 @@ console.log(checkSum(sum));
  *  multiplies it by the number stored at `difference` and
  *  then prints the result to the console.
  */
-function checkProduct(product,difference){
-	return product*difference;
+function checkProduct(x,y){
+	return x*y;
 }
 checkProduct();
 console.log(checkProduct(product,difference));
@@ -119,7 +120,7 @@ function addThenSubtract(n1,n2,n3){
 	
 }
 addThenSubtract();
-console.log(addThenSubtract(10,9,8));
+console.log(addThenSubtract(product,difference,sum));
 /**
  *  #9
  *  Function - addThenMultiply
@@ -135,6 +136,7 @@ function addThenMultiply(n1,n2,n3){
 	return (n1 + n2) * n3;
 }
 addThenMultiply();
+var howMany=(addThenMultiply(product,sum,difference));
 console.log(addThenMultiply(product,sum,difference));
 
 /**
@@ -154,8 +156,8 @@ console.log(addThenMultiply(product,sum,difference));
 function createFullName(firstName, lastName) {
 	return firstName + " " + lastName;
 }
-var name = createFullName("JP", "Carreon");
-console.log(name);
+var myFullName = createFullName("JP", "Carreon");
+console.log(myFullName);
 
 /** 
  *  #11
@@ -171,8 +173,13 @@ console.log(name);
  *  **Call this function and pass in a number value.
  *  Store the return value to a variable named** `canDrinkBeer`
  */
-
-
+function verifyDrinkingAge(age){
+if (age >=21) {return true;
+}else{
+	return false;}
+}
+var canDrinkBeer = verifyDrinkingAge(35);
+	console.log(canDrinkBeer);
 /**
  *  #12
  *  Function - throwParty
@@ -182,6 +189,12 @@ console.log(name);
  *  "The Party will have tons of Cake!" otherwise this message
  *  should be "This Party will have an open bar".
  */
+function throwParty(){
+	if (canDrinkBeer === false){return "The Party will have tons of Cake!";
+}else{
+	return "This Party will have an open bar";}
+}
+console.log(throwParty());
 
 
 /**
@@ -203,6 +216,11 @@ console.log(name);
   *  **example output:**
  *      "Peter Bojanglesloves loves to eat California Burritos"
  */
+function eatFood(firstName, lastName, food){
+	return firstName + " " + lastName + " loves to eat " + food;
+
+}
+console.log(eatFood("JP","Carreon","Pizza"));
 
 
 /**
@@ -216,4 +234,17 @@ console.log(name);
  *  the message will be `"Bacon Pancakes, makin' Bacon Pancakes..."`
  *  othewise the message will be `"Let it go.... LET IT GOOOOOOoOoOoOo..."`
  */
+ function repeater (num, legalAge){
+ 	for(var i = 0; i < num; i++){
+ 		if(legalAge === true){
+ 			console.log("Bancon Pancakes...");
+ 		}
+ 		else{ 
+ 			console.log("Let it go.....");
+
+ 			}
+ 		}
+ 		return
+ 	}
+repeater(howMany,canDrinkBeer); 
 
